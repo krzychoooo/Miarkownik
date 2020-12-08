@@ -1,0 +1,65 @@
+on System#Boot do
+TaskValueSet 2,1,25
+TaskValueSet 2,2,38
+TaskValueSet 2,3,0
+TaskValueSet 3,4,0
+Servo,1,0,25
+endon 
+
+// if use Domoticz
+//on Termometr_1#Temperature>80 do
+//    SendToHTTP 192.168.8.111,8080,/json.htm?param=switchlight&type=command&idx=5&switchcmd=On  //kolejność parametrów istotna
+//endon
+
+on Termometr_1#Temperature do
+  TaskValueSet 3,3,[Termometr_1#Temperature]-[piec2#oldTemp]
+  if [Termometr_1#Temperature]<[piec#temp_set]
+     TaskValueSet 2,4,[piec#temp_set]-[Termometr_1#Temperature]  //set error
+     TaskValueSet 2,3,[piec#sumError]+[piec#error]-0.3
+     TaskValueSet 2,1,[piec#error]*17+53+[piec#sumError]
+  endif
+
+  if [Termometr_1#Temperature]>[piec#temp_set] 
+     TaskValueSet 2,1,10
+     TaskValueSet 2,3,0
+  endif
+
+  if [piec#alpha]<10
+    TaskValueSet 2,1,10
+  endif
+  
+  if [piec#alpha]>100
+    TaskValueSet 2,1,100
+  endif
+  if [piec2#deltaTemp]<-0.1
+    TaskValueSet 2,1,50      //set alpha
+  endif
+  if [piec2#deltaTemp]>0.1
+    TaskValueSet 2,1,10      //set alpha
+    TaskValueSet 2,3,-10       //set sumError
+  endif
+
+  if [piec2#stopWork]=1
+    TaskValueSet 2,1,0
+  endif
+
+  if [piec#alpha]!=[piec2#oldAlpha]
+    Servo,1,0,[piec#alpha]
+    timerSet,1,5
+  endif
+  TaskValueSet 3,1,[piec#alpha]       //set piec2#oldAlpha
+  TaskValueSet 3,2,[Termometr_1#Temperature]   //set piec2#oldTemp
+endon
+
+on setTemp do                        // http://<IP>/control?cmd=event,setTemp=55
+  TaskValueSet 2,2,%eventvalue%
+endon
+on stopWorkEvent do  // zamykanie
+  TaskValueSet 3,4,%eventvalue%
+endon
+
+On Rules#Timer=1 do  //When Timer1 expires, do
+   servo,1,0,9001
+endon
+
+
