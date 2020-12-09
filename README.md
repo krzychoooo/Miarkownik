@@ -1,6 +1,6 @@
 # Miarkownik01
 Zgłaszanie błędów przejdź do zakładki Issues  
-Zgłaszanie pomysłów na nowe funkcje przejdź do zakładki discussions  
+Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki Discussions  
 
 ## FAQ
 1. **Czy w zestawie jest czujnik temperatury?**  
