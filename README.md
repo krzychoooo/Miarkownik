@@ -11,3 +11,6 @@ Zgłaszanie pomysłów na nowe funkcje przejdź do zakładki discussions
   Tak, jeśli przez 8 minut nie osiągnie temperatury nastawionej to zamyka klapkę. Po uruchomieniu czeka 40 minut.
 4. **Czy jest szybka możliwość zamykania klapy podczas podkładania do pieca?**  
   Tak, służy do tego celu przycisk "Zamknij"
+5. **Czy przy każdym rozpalaniu trzeba inicjować podnoszenie klapy przez smartfon?**  
+  Tak, ponieważ gdy się nie pali klapa jest zamknięta. Wystarczy nacisnąć przycisk "Praca"
+  
