@@ -13,4 +13,5 @@ Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki 
   Tak, służy do tego celu przycisk "Zamknij"
 5. **Czy przy każdym rozpalaniu trzeba inicjować podnoszenie klapy przez smartfon?**  
   Tak, ponieważ gdy się nie pali klapa jest zamknięta. Wystarczy nacisnąć przycisk "Praca"
-  
+6. **Czy smartfon łączy się bezpośrednio z miarkownikiem, czy poprzez router?**  
+  Cała komunikacja odbywa się przez router. Wystarczy aby telefon był w zasięgu routera i wystarczy aby miarkownik był w zasięgu routera.
