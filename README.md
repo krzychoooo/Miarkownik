@@ -4,7 +4,7 @@ Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki 
 
 ## FAQ
 1. **Czy w zestawie jest czujnik temperatury?**  
-  Tak jest w zestawie.
+  Tak jest w zestawie. Długość przewodu 1m. Możliwość przedłużenia przed wysyłką.
 2. **Czy urządzenie to sterownik z siłownikiem w jednym?**  
   Tak, urządzenie zawiera serwo, które działa płynnie.
 3. **Czy jest "wygaszanie" ?**  
