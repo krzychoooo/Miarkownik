@@ -1,0 +1,72 @@
+on System#Boot do
+TaskValueSet 2,1,25
+TaskValueSet 2,2,38
+TaskValueSet 2,3,0
+TaskValueSet 3,4,0
+TaskValueSet 4,1,100
+timerSet,2,5
+Servo,1,0,25
+endon 
+
+on Termometr_1#Temperature do
+  TaskValueSet 3,3,[Termometr_1#Temperature]-[piec2#oldTemp]
+  if [Termometr_1#Temperature]<[piec#temp_set]
+     TaskValueSet 2,4,[piec#temp_set]-[Termometr_1#Temperature]  //set error
+     TaskValueSet 2,3,[piec#sumError]+[piec#error]-0.3
+     TaskValueSet 2,1,[piec#error]*17+33+[piec#sumError]
+  endif
+
+  if [Termometr_1#Temperature]>[piec#temp_set] 
+     TaskValueSet 2,1,5
+     TaskValueSet 2,3,0
+     TaskValueSet 4,1,100
+  endif
+
+  if [piec#alpha]<10
+    TaskValueSet 2,1,5
+  endif
+  
+  if [piec#alpha]>100
+    TaskValueSet 2,1,100
+  endif
+  if [piec2#deltaTemp]<-0.2
+    TaskValueSet 2,1,50      //set alpha
+  endif
+  if [piec2#deltaTemp]>0.2
+    TaskValueSet 2,1,5      //set alpha
+    TaskValueSet 2,3,-10       //set sumError
+  endif
+
+  if [piec2#stopWork]=1
+    TaskValueSet 2,1,0
+  endif
+
+  if [piec#alpha]!=[piec2#oldAlpha]
+    Servo,1,0,[piec#alpha]
+    timerSet,1,5
+  endif
+  TaskValueSet 3,1,[piec#alpha]       //set piec2#oldAlpha
+  TaskValueSet 3,2,[Termometr_1#Temperature]   //set piec2#oldTemp
+endon
+
+on setTemp do                        // http://<IP>/control?cmd=event,setTemp=55
+  TaskValueSet 2,2,%eventvalue%
+endon
+on stopWorkEvent do  // zamykanie
+  TaskValueSet 3,4,%eventvalue%
+  if [piec2#stopWork]=0
+    TaskValueSet 4,1,100
+  endif
+endon
+
+On Rules#Timer=1 do
+   servo,1,0,9001
+endon
+On Rules#Timer=2 do
+  TaskValueSet 4,1,[piec3#timeToOFF]-2
+    if [piec3#timeToOFF]<0
+      TaskValueSet 3,4,1   //fuel end -> stopWork
+      TaskValueSet 4,1,0
+    endif
+  timerSet,2,20
+endon
