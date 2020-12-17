@@ -1,4 +1,4 @@
-# Miarkownik01
+# ELEKTRONICZNY MIARKOWNIK CIĄGU WiFi
 Zgłaszanie błędów przejdź do zakładki Issues  
 Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki Discussions  
 
