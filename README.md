@@ -15,6 +15,9 @@ Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki 
   Tak, ponieważ gdy się nie pali klapa jest zamknięta. Wystarczy nacisnąć przycisk "Praca"
 6. **Czy smartfon łączy się bezpośrednio z miarkownikiem, czy poprzez router?**  
   Cała komunikacja odbywa się przez router. Wystarczy aby telefon był w zasięgu routera i wystarczy aby miarkownik był w zasięgu routera.
+7. **Jak zrestartowac urzadzenie zeby skomunikowac je z innym  ruterem ?**  
+  Wyłączyć router do którego jest przypisany miarkownik. Włączyć miarkownik. Miarkownik będzie próbował nawiązać połączenie przez jakiś czas(ok 1min) a następnie utworzy ponownie własną sieć "Miarkownik". Dalej już tak samo jak przy nowej instalacji.
+  
  
  ## Video
 
