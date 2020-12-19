@@ -21,7 +21,8 @@ Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki 
   Nie. Aplikacja służy tylko do ustawienia temperatury i do podglądu parametrów.
 9. **Czy muszę podczas instalacji aplikacji na telefon zezwolić jej na dostęp do mediów?**  
   Tak. Aplikacja wykorzystuje dostęp do dysku FLASH aby zapisać swoje ustawienia, np IP miarkownika. I tylko do tego celu. Brak zezwolenia spowoduje błędne działanie aplikacji.
-
+10. **Czy jest możliwość ustawienia/zaprogramowania aby rozpalanie aktywowało się po podłączeniu zasilania?**  
+  Tak. Należy zrobić drobną zmianę w rules. W katalogu DOC->Tutorials jest poradnik Power_on_miarkownik_start.pdf
 
 
 ## Video
