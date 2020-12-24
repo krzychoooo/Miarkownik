@@ -28,8 +28,8 @@ Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki 
 ## Video
 
 1.  **Aplikacja android**  
-[![film](http://img.youtube.com/vi/8OA6ZBTOV84/0.jpg)](https://www.youtube.com/watch?v=8OA6ZBTOV84)
+[![elektroniczny miarkownik ciągu WiFi](http://img.youtube.com/vi/8OA6ZBTOV84/0.jpg)](https://www.youtube.com/watch?v=8OA6ZBTOV84)
 
 2.  **Integracja miarkownika z systemem Domoticz**  
-[![film](http://img.youtube.com/vi/bdN2KOH_0wY/0.jpg)](https://www.youtube.com/watch?v=bdN2KOH_0wY)
+[![elektroniczny miarkownik ciągu WiFi](http://img.youtube.com/vi/bdN2KOH_0wY/0.jpg)](https://www.youtube.com/watch?v=bdN2KOH_0wY)
 
