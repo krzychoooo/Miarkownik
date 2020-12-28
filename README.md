@@ -23,8 +23,9 @@ Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki 
   Tak. Aplikacja wykorzystuje dostęp do dysku FLASH aby zapisać swoje ustawienia, np IP miarkownika. I tylko do tego celu. Brak zezwolenia spowoduje błędne działanie aplikacji.
 10. **Czy jest możliwość ustawienia/zaprogramowania aby rozpalanie aktywowało się po podłączeniu zasilania?**  
   Tak. Należy zrobić drobną zmianę w rules. W katalogu DOC->Tutorials jest poradnik Power_on_miarkownik_start.pdf
-
-
+11. **Jakie jast hasło do sieci miarkownik?**  
+  miark001
+  
 ## Video
 
 1.  **Aplikacja android**  
