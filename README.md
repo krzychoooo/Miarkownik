@@ -34,3 +34,5 @@ Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki 
 2.  **Integracja miarkownika z systemem Domoticz**  
 [![elektroniczny miarkownik ciągu WiFi](http://img.youtube.com/vi/bdN2KOH_0wY/0.jpg)](https://www.youtube.com/watch?v=bdN2KOH_0wY)
 
+3.  **FACTORY RESET i nieszczęście gotowe**  
+[![elektroniczny regulator ciągu pieca](http://img.youtube.com/vi/S1Ic6tRdCs0/0.jpg)](https://youtu.be/S1Ic6tRdCs0)
