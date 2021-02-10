@@ -36,3 +36,7 @@ Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki 
 
 3.  **FACTORY RESET i nieszczęście gotowe**  
 [![elektroniczny regulator ciągu pieca](http://img.youtube.com/vi/S1Ic6tRdCs0/0.jpg)](https://youtu.be/S1Ic6tRdCs0)
+
+3.  **Co nowego w wersji 2**  
+[![elektroniczny regulator ciągu pieca](http://img.youtube.com/vi/3BPCXNvK4yQ/0.jpg)](https://youtu.be/3BPCXNvK4yQ)
+
