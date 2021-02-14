@@ -27,16 +27,21 @@ Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki 
   miark001
   
 ## Video
+4.  **Miarkownik przy piecu 1**  
+[![elektroniczny regulator ciągu pieca](http://img.youtube.com/vi/W2Xse9-yrOg/0.jpg)](https://youtu.be/W2Xse9-yrOg)
 
-1.  **Aplikacja android**  
-[![elektroniczny miarkownik ciągu WiFi](http://img.youtube.com/vi/8OA6ZBTOV84/0.jpg)](https://www.youtube.com/watch?v=8OA6ZBTOV84)
-
-2.  **Integracja miarkownika z systemem Domoticz**  
-[![elektroniczny miarkownik ciągu WiFi](http://img.youtube.com/vi/bdN2KOH_0wY/0.jpg)](https://www.youtube.com/watch?v=bdN2KOH_0wY)
+3.  **Co nowego w wersji 2**  
+[![elektroniczny regulator ciągu pieca](http://img.youtube.com/vi/3BPCXNvK4yQ/0.jpg)](https://youtu.be/3BPCXNvK4yQ)
 
 3.  **FACTORY RESET i nieszczęście gotowe**  
 [![elektroniczny regulator ciągu pieca](http://img.youtube.com/vi/S1Ic6tRdCs0/0.jpg)](https://youtu.be/S1Ic6tRdCs0)
 
-3.  **Co nowego w wersji 2**  
-[![elektroniczny regulator ciągu pieca](http://img.youtube.com/vi/3BPCXNvK4yQ/0.jpg)](https://youtu.be/3BPCXNvK4yQ)
+2.  **Integracja miarkownika z systemem Domoticz**  
+[![elektroniczny miarkownik ciągu WiFi](http://img.youtube.com/vi/bdN2KOH_0wY/0.jpg)](https://www.youtube.com/watch?v=bdN2KOH_0wY)
+
+1.  **Aplikacja android**  
+[![elektroniczny miarkownik ciągu WiFi](http://img.youtube.com/vi/8OA6ZBTOV84/0.jpg)](https://www.youtube.com/watch?v=8OA6ZBTOV84)
+
+
+
 
