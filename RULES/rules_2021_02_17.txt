@@ -1,0 +1,80 @@
+//2021_02_17
+on System#Boot do
+gpio,13,1
+TaskValueSet 2,1,25
+TaskValueSet 2,2,38
+TaskValueSet 2,3,0
+TaskValueSet 3,4,0
+TaskValueSet 4,1,100
+timerSet,2,5
+Servo,1,0,25
+endon 
+
+on Termometr_1#Temperature do
+  TaskValueSet 3,3,[Termometr_1#Temperature]-[piec2#oldTemp]
+  TaskValueSet 2,4,[piec#temp_set]-[Termometr_1#Temperature]  //set error
+  TaskValueSet 2,1,[piec#error]*35+10+[piec#sumError]
+  if [piec#error]>0
+     TaskValueSet 2,3,[piec#sumError]+[piec#error]*0.2
+  endif
+
+  if [Termometr_1#Temperature]>[piec#temp_set] 
+     TaskValueSet 2,1,0
+     //TaskValueSet 2,3,0
+  endif
+
+  if [piec#error]<2
+     TaskValueSet 4,1,100
+  endif
+
+  if [piec#alpha]<0
+    TaskValueSet 2,1,0
+  endif
+  
+  if [piec#alpha]>160
+    TaskValueSet 2,1,160
+  endif
+
+  if [piec2#deltaTemp]<-0.1 and [piec#error]>-3 and [piec#error]<=0
+    TaskValueSet 2,1,40      //set alpha
+  endif
+  if [piec2#deltaTemp]>0.1 and  [piec#error]<3 and [piec#error]>=0
+    TaskValueSet 2,1,5      //set alpha
+    TaskValueSet 2,3,[piec#sumError]*0.9       //set sumError
+  endif
+
+  if [piec2#stopWork]=1
+    TaskValueSet 2,1,0
+  endif
+
+  Servo,1,0,[piec#alpha]
+  timerSet,1,5
+
+  TaskValueSet 3,1,[piec#alpha]       //set piec2#oldAlpha
+  TaskValueSet 3,2,[Termometr_1#Temperature]   //set piec2#oldTemp
+endon
+
+on setTemp do                        // http://<IP>/control?cmd=event,setTemp=55
+  TaskValueSet 2,2,%eventvalue%
+  TaskValueSet 4,1,400
+  TaskValueSet 2,3,0
+endon
+on stopWorkEvent do  // zamykanie
+  TaskValueSet 3,4,%eventvalue%
+  TaskValueSet 2,3,0
+  if [piec2#stopWork]=0
+    TaskValueSet 4,1,400
+  endif
+endon
+
+On Rules#Timer=1 do
+   servo,1,0,9001
+endon
+On Rules#Timer=2 do
+  TaskValueSet 4,1,[piec3#timeToOFF]-2
+    if [piec3#timeToOFF]<0
+      TaskValueSet 3,4,1   //fuel end -> stopWork
+      TaskValueSet 4,1,0
+    endif
+  timerSet,2,50
+endon
