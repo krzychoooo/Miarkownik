@@ -8,7 +8,8 @@ Zgłaszanie pomysłów na nowe funkcje i ogólna dyskusja przejdź do zakładki 
 2. **Czy urządzenie to sterownik z siłownikiem w jednym?**  
   Tak, urządzenie zawiera serwo, które działa płynnie.
 3. **Czy jest "wygaszanie" ?**  
-  Tak, jeśli przez 8 minut nie osiągnie temperatury nastawionej to zamyka klapkę. Po uruchomieniu czeka 40 minut.
+  Tak, jeśli przez 42 minut nie osiągnie temperatury nastawionej to zamyka klapkę.
+  Każde wysłanie nowej nastawy temperatury powoduje ponowne odliczanie czasu.
 4. **Czy jest szybka możliwość zamykania klapy podczas podkładania do pieca?**  
   Tak, służy do tego celu przycisk "Zamknij"
 5. **Czy przy każdym rozpalaniu trzeba inicjować podnoszenie klapy przez smartfon?**  
